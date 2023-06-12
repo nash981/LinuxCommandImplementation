@@ -1,24 +1,46 @@
 # LinuxCommandImplementation
-# NOTE: Work in progress
+<!-- # NOTE: Work in progress -->
 
-<!-- ## Description
+## Description
 
-Briefly describe the purpose and goal of your project. Explain what problem it solves or what value it provides.
+Implementation of following linux commands from scratch in C:
+- cut
+- grep
+
+This program runs on a terminal, with detailed instructions given below. 
 
 ## Requirements
 
-Provide instructions on how to install and set up the project. Include any dependencies that need to be installed and any configuration required.
+- GCC compiler
+- UNIX based terminal
 
 ## Usage
+**scut (simplified version of Cut)**
+- Run `make clean` to remove all existing compiled files
+- Run `make` to compile latest version of the scut executable. 
+- To run the executable, we have to give it input stream to cut from. It can be done by piping the output of some commands like cat, ls,etc.
+- Command format: `[Piping input] | scut [feature] [range]
+ - **feature**: 
+  - **-l**: columns for the cut selections are on a per-character basis
+  - **-w**: the cut selection columns will be separated by any whitespace (spaces or tabs) 
+  - **-c**: cut selection columns will be separated by commas
+ - **range**:
+  - **1,3,4**: Comma separated input implies individual colums
+  - **3-8**: Hyphen seperated input implies range between the two numbers. 
+  - This program supports mix of comma seperated input and hyphen separated input as long as they are in ascending order and not overlapping
 
-Explain how to use the project and any relevant usage examples or screenshots. Provide any additional details or instructions that users may need.
-
-## Features
-
-List the key features and functionalities of your project. Highlight what sets it apart and makes it unique.
-
-## Technologies
-
-- List the technologies, frameworks, libraries, or APIs used in the project.
-- Provide brief explanations of why each technology was chosen and how it contributes to the project.
+<!-- **sgrep (simplifed version of Grep command)**
+- Run `make clean` to remove all existing compiled files
+- Run `make` to compile latest version of the scut executable. 
+- To run the executable, we have to give it input stream to cut from. It can be done by piping the output of some commands like cat, ls,etc.
+- Command format: `[Piping input] | scut [feature] [range]
+ - **feature**: 
+  - **-l**: columns for the cut selections are on a per-character basis
+  - **-w**: the cut selection columns will be separated by any whitespace (spaces or tabs) 
+  - **-c**: cut selection columns will be separated by commas
+ - **range**:
+  - **1,3,4**: Comma separated input implies individual colums
+  - **3-8**: Hyphen seperated input implies range between the two numbers. 
+  - This program supports mix of comma seperated input and hyphen separated input as long as they are in ascending order and not overlapping
  -->
+
